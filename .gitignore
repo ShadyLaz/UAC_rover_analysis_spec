@@ -2,5 +2,4 @@
 __pychache__
 .idea
 venv
-/tests/UAC_rover/newLogging.py
-/tests/UAC_rover/setup_logger.py
+UAC_rover
