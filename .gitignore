@@ -1,0 +1,5 @@
+*.json
+__pychache__
+.idea
+venv
+UAC_rover
