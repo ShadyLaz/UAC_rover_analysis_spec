@@ -1,15 +1,19 @@
+
 from loggingFile import logger
 import pytest
 from UAC_rover.power_control.SolarPanels import SolarPanels
 
 
-@pytest.mark.tags("TC-1", "Normal", "unit-test")
+
+@pytest.mark.tags("TC-1", "Normal")
+@pytest.mark.unit
 def test_InOptimalTempFail(logger):
+    #logger = logger.getLogger(__name__)
     logger.info("LOGGER_MESSAGE")
     assert SolarPanels.calc_efficiency(14) == 0.7
 
-
 def test_InOptimalTempPass():
+
     assert SolarPanels.calc_efficiency(14) == 1
 
 

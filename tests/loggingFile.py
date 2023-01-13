@@ -2,13 +2,12 @@
 import logging
 import pytest
 
-LOGGER = logging.getLogger(__name__)
+
 
 def __init__(self):
-    self.logger = logging.getLogger('Thanos.Superman.Batman')
+    #To use later
+    self.logger = logging.getLogger(__name__)
     print(self.logger.parent)
-    self.logger.info('creating an instance of Auxiliary')
-
 
 @pytest.fixture()
 def logger():
@@ -20,7 +19,9 @@ def logger():
             logging.FileHandler("test_logger.log", 'w')
         ]
     )
-    logger = logging.getLogger('Some.Logger')
+
+    logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
+
 
     return logger

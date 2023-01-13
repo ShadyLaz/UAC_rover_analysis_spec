@@ -1,5 +1,8 @@
+
+import logging
 import time
 from UAC_rover.helpers.BaseClass import BaseClass
+from loggingFile import logger
 
 
 class SolarPanels(BaseClass):
@@ -11,6 +14,7 @@ class SolarPanels(BaseClass):
     ]
 
     def __init__(self, identifier=0):
+        #self.logger = logging.getLogger(__name__)
         self.identifier = identifier
         self.__class__.__name__ = self.__class__.__name__.replace(f"_{self.identifier - 1}", "")
         self.__class__.__name__ = self.__class__.__name__ + f"_{self.identifier}"
@@ -37,7 +41,7 @@ class SolarPanels(BaseClass):
     def calc_efficiency(temp):
         """The efficiency of the solar panels is dependent on temperature.
         Optimal at 12-17 degrees."""
-
+        logging.warning("watch out!")
         optimal_temp_range = range(12, 17)
         efficiency = 1 if temp in optimal_temp_range else 0.7
 
