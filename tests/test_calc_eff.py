@@ -1,33 +1,29 @@
-
 from loggingFile import logger
 import pytest
 from UAC_rover.power_control.SolarPanels import SolarPanels
 
 
+@pytest.mark.parametrize("temp, eff", [
+    pytest.param(
+        14, 0.7, marks=[pytest.mark.tags("TC-1", "MarkXfail"), pytest.mark.xfail()]
+    ),
+    pytest.param(
+        14, 1, marks=pytest.mark.tags("TC-2", "OPTIMAL")
+    ),
+    pytest.param(
+        14.444444444, 1, marks=pytest.mark.tags("TC-3", "FLOAT_IN_OPTIMAl") #Should not FAIL!!
+    ),
+    pytest.param(
+        14.444444444, 0.7, marks=[pytest.mark.tags("TC-4", "FLOAT_NON_OPTIMAL"), pytest.mark.xfail()]
+    ),
+    pytest.param(
+        "14", 1, marks=[pytest.mark.tags("TC-5", "STRING_OPTIMAL"), pytest.mark.xfail()]
+    ),
+    pytest.param(
+        "14", 1, marks=[pytest.mark.tags("TC-6", "STRING_NON_OPTIMAl"), pytest.mark.xfail()]
+    ),
+])
+def test_InOptimalTempFail(logger, temp, eff):
 
-@pytest.mark.tags("TC-1", "Normal")
-@pytest.mark.unit
-def test_InOptimalTempFail(logger):
-    #logger = logger.getLogger(__name__)
     logger.info("LOGGER_MESSAGE")
-    assert SolarPanels.calc_efficiency(14) == 0.7
-
-def test_InOptimalTempPass():
-
-    assert SolarPanels.calc_efficiency(14) == 1
-
-
-@pytest.mark.tag("TC-3", "Border", "unit-test")
-@pytest.mark.xfail()
-def test_float():
-    assert SolarPanels.calc_efficiency(13.33333333333333) == 1
-
-#[["tag1", "tag2", "tag3"], ["tag1", "tag2", "tag3"]]
-@pytest.mark.xfail()
-def test_StringInput_1():
-    assert SolarPanels.calc_efficiency("String") == 1
-
-
-@pytest.mark.xfail()
-def test_StringInput_2():
-    assert SolarPanels.calc_efficiency("String") == 0.7
+    assert SolarPanels.calc_efficiency(temp) == eff
