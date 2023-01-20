@@ -1,5 +1,5 @@
 # Requirement analysis
-
+# Tc5
 ## Required enablers
 
 1. Drop battery to lower 2.3 Volts. REQ-id 1
@@ -28,6 +28,6 @@
 | **REQ-id** | **Test case id** | **Test level** | **Notes**                                   |
 |:-----------|:-----------------|:---------------|:--------------------------------------------|
 | 1          | ts1              | L1             | Drop battery charge to lower than 2.3 volts |
-| 2          | ts2              | L1             | Charge battery to 4.2 volts                 |
+| 2          | ts2              | L1             | Drop battery charge                         |
 | 3          | ts3              | L0             | Restart                                     | 
 | 4          | ts4              | L0             | Change environment                          |
