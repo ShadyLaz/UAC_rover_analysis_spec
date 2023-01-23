@@ -1,3 +1,4 @@
+
 import logging
 import pytest
 
@@ -9,7 +10,7 @@ def __init__(self):
 
 
 @pytest.fixture()
-def logger():
+def logg():
     logging.basicConfig(
         level=logging.DEBUG,
         format='%(asctime)s [%(name)s]: %(levelname)s: %(message)s',
