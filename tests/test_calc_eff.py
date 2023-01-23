@@ -1,4 +1,4 @@
-from loggingFile import logg
+# from loggingFile import logg
 import pytest
 from UAC_rover.power_control.SolarPanels import SolarPanels
 
