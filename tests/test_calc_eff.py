@@ -1,4 +1,4 @@
-from loggingFile import logger
+from loggingFile import logg
 import pytest
 from UAC_rover.power_control.SolarPanels import SolarPanels
 
@@ -27,6 +27,6 @@ from UAC_rover.power_control.SolarPanels import SolarPanels
                         pytest.mark.xfail()]
     ),
 ])
-def test_InOptimalTempFail(logger, temp, eff):
-    logger.info("LOGGER_MESSAGE")
+def test_InOptimalTempFail(logg, temp, eff):
+    logg.info("LOGGER_MESSAGE")
     assert SolarPanels.calc_efficiency(temp) == eff

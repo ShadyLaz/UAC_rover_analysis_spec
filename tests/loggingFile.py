@@ -5,12 +5,12 @@ import pytest
 
 def __init__(self):
     # To use later
-    self.logger = logging.getLogger(__name__)
-    print(self.logger.parent)
+    self.logg = logging.getLogger(__name__)
+    print(self.logg.parent)
 
 
 @pytest.fixture()
-def logger():
+def logg():
     logging.basicConfig(
         level=logging.DEBUG,
         format='%(asctime)s [%(name)s]: %(levelname)s: %(message)s',

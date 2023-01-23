@@ -1,5 +1,5 @@
 
-from loggingFile import logger
+from loggingFile import logg
 import pytest
 from UAC_rover.power_control.SolarPanels import SolarPanels
 
@@ -9,8 +9,8 @@ from UAC_rover.power_control.SolarPanels import SolarPanels
     ),
 ])
 
-def test_charge(logger, conditions, IntOutput):
-    logger.info("LOGGER_MESSAGE")
+def test_charge(logg, conditions, IntOutput):
+    logg.info("LOGGER_MESSAGE")
     charge_output = SolarPanels.charge(conditions)
     #assert float(str(charge_output)[:5]) == float(str(IntOutput)[:5])
     #Better way to write this function
