@@ -13,6 +13,6 @@ def load_data(a):
     return a
 
 
-def dummy_function():
+def dummy_function(a):
     # This is the desired function we are testing
-    return load_data()
+    return load_data(a)
