@@ -9,7 +9,8 @@ import pytest
 
 def load_data(a):
     # This should be mocked as it is a dependency, this function converts byte data to float value
-    return float(str(a))
+    a = float(str(a))
+    return a
 
 
 def dummy_function():
