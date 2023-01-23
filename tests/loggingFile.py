@@ -10,7 +10,7 @@ def __init__(self):
 
 
 @pytest.fixture()
-def logg():
+def logger():
     logging.basicConfig(
         level=logging.DEBUG,
         format='%(asctime)s [%(name)s]: %(levelname)s: %(message)s',
