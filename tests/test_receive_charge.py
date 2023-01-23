@@ -1,5 +1,4 @@
 
-import self
 
 from loggingFile import logger
 import pytest

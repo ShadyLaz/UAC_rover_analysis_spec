@@ -1,7 +1,8 @@
 
+# import os
 from mockData import dummy_function
 import pytest
-import os
+
 
 
 @pytest.mark.parametrize("n",[
@@ -9,7 +10,7 @@ import os
     ),
 ])
 
-def test_mocking_function(mocker, n):
+def test_mocking_function(mocker,a, n):
 
     mocker.patch("mockData.load_data", return_value=n)
-    assert dummy_function() == n, f"{n} is the new mocked value"
+    assert dummy_function(a) == n, f"{n} is the new mocked value"
