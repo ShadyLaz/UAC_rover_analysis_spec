@@ -47,5 +47,6 @@ jobs:
         with:
           repository: ShadyLaz/UAC_rover_analysis_spec
           path: UAC_rover_analysis_spec/tests
-        run :  pytest $(git ls-files 'test_calc_eff.py')
+        run : |  
+          pytest $(git ls-files 'test_calc_eff.py')
 
