@@ -45,6 +45,6 @@ jobs:
       - name: script
         with:
           repository: ShadyLaz/UAC_rover_analysis_spec
-        path: UAC_rover_analysis_spec/tests
+          path: UAC_rover_analysis_spec/tests
         run : pytest test_calc_eff.py
 
