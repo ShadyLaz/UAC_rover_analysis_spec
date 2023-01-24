@@ -33,7 +33,7 @@ jobs:
     # While cloning the repository:
     #   - it clones the repo into the given `path`
     #   - it checks out the branch defined at `ref`
-      - name: Clone supercharge docs repository
+      - name: clone repo
         uses: actions/checkout@v2
         with:
           repository: Nergan123/UAC_rover
