@@ -3,14 +3,15 @@ import logging
 import pytest
 
 
-
 def __init__(self):
-    #To use later
-    self.logger = logging.getLogger(__name__)
-    print(self.logger.parent)
+    # To use later
+    self.logg = logging.getLogger(__name__)
+    print(self.logg.parent)
+
 
 @pytest.fixture()
-def logger():
+def logg():
+    """ logging config"""
 
     logging.basicConfig(
         level=logging.DEBUG,
@@ -22,6 +23,5 @@ def logger():
 
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
-
 
     return logger

@@ -1,15 +1,17 @@
-
-from loggingFile import logger
+# from loggingFile import logg
 import pytest
 from UAC_rover.power_control.SolarPanels import SolarPanels
 
 
-@pytest.mark.parametrize("conditions, IntOutput",[
-    pytest.param(b'\x00\x10',0.006274509803921569 , marks=[pytest.mark.tags("TC-1")]
-    ),
+@pytest.mark.parametrize("conditions, IntOutput", [
+    pytest.param(b'\x00\x10', 0.006274509803921569
+                 ),
 ])
+def test_charge(logg, conditions, IntOutput):
+    """ checks if byte output is equal to int output """
 
-def test_charge(logger, conditions, IntOutput):
-    logger.info("LOGGER_MESSAGE")
+    logg.info("LOGGER_MESSAGE")
     charge_output = SolarPanels.charge(conditions)
-    assert float(str(charge_output)[:5]) == float(str(IntOutput)[:5])
+    # assert float(str(charge_output)[:5]) == float(str(IntOutput)[:5])
+    # Better way to write this function
+    assert float(str(charge_output)) == pytest.approx(float(str(IntOutput)))
