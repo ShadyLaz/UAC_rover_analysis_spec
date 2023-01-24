@@ -37,8 +37,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: Nergan123/UAC_rover
-          path: resources/docs/2.x
-          ref: 2.x
+          path: ./UAC_rover
+          ref: main.py
 
       - name: run with ls
         run: ls
