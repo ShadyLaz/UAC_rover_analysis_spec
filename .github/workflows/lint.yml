@@ -44,7 +44,6 @@ jobs:
           pylint $(git ls-files '*.py')
 
       - name: script
-        uses: actions/checkout@v2
         with:
           repository: ShadyLaz/UAC_rover_analysis_spec
           path: UAC_rover_analysis_spec/tests
