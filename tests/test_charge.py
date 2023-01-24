@@ -8,6 +8,8 @@ from UAC_rover.power_control.SolarPanels import SolarPanels
                  ),
 ])
 def test_charge(logg, conditions, IntOutput):
+    """ checks if byte output is equal to int output """
+
     logg.info("LOGGER_MESSAGE")
     charge_output = SolarPanels.charge(conditions)
     # assert float(str(charge_output)[:5]) == float(str(IntOutput)[:5])

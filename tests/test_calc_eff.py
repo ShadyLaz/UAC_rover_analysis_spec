@@ -28,5 +28,7 @@ from UAC_rover.power_control.SolarPanels import SolarPanels
     ),
 ])
 def test_InOptimalTempFail(logg, temp, eff):
+    """ checks if efficiency is optimal  """
+
     logg.info("LOGGER_MESSAGE")
     assert SolarPanels.calc_efficiency(temp) == eff

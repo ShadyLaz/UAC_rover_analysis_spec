@@ -11,6 +11,8 @@ def __init__(self):
 
 @pytest.fixture()
 def logg():
+    """ logging config"""
+
     logging.basicConfig(
         level=logging.DEBUG,
         format='%(asctime)s [%(name)s]: %(levelname)s: %(message)s',

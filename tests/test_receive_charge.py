@@ -12,5 +12,7 @@ from UAC_rover.power_control.PowerControl import PowerControl
     ),
 ])
 def test_receive(logg, val, bat_lvl):
+    """ checks if battery level is equal to battery level after receiving charge  """
+
     logg.info("LOGGER_MESSAGE")
     assert PowerControl.receive_charge() == bat_lvl + val
