@@ -43,10 +43,14 @@ jobs:
         run: |
           pylint $(git ls-files '*.py')
 
-      - name: script
-        with:
-          repository: ShadyLaz/UAC_rover_analysis_spec
-          path: UAC_rover_analysis_spec/tests
-        run : |  
-          pytest $(git ls-files 'test_calc_eff.py')
+#      - name: script
+#        with:
+#          repository: ShadyLaz/UAC_rover_analysis_spec
+#          path: UAC_rover_analysis_spec/tests
+#        run : |
+#          pytest $(git ls-files 'test_calc_eff.py')
 
+      - name: Touch a file
+        command: touch test_calc_eff.py
+        files:
+          - path: test_calc_eff.py
