@@ -27,14 +27,14 @@ jobs:
           pylint $(git ls-files '*.py')
 
       - name: Clone UAC rover repository
-        uses: Nergan123/UAC_rover
+        uses: actions/checkout@v2
 
     # This part here is cloning a second repository
     # While cloning the repository:
     #   - it clones the repo into the given `path`
     #   - it checks out the branch defined at `ref`
       - name: Clone supercharge docs repository
-        uses: Nergan123/UAC_rover
+        uses: actions/checkout@v2
         with:
           repository: Nergan123/UAC_rover
           path: resources/docs/2.x
