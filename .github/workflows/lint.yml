@@ -26,14 +26,14 @@ jobs:
         run: |
           pylint $(git ls-files '*.py')
 
-      - name: Clone UAC rover repository
+      - name: Clone repo
         uses: actions/checkout@v2
 
     # This part here is cloning a second repository
     # While cloning the repository:
     #   - it clones the repo into the given `path`
     #   - it checks out the branch defined at `ref`
-      - name: clone repo
+      - name: Clone UAC rover repository
         uses: actions/checkout@v2
         with:
           repository: Nergan123/UAC_rover
@@ -44,7 +44,6 @@ jobs:
           pylint $(git ls-files '*.py')
 
       - name: Clone UAC rover repository
-        uses: actions/checkout@v2
         with:
           repository: ShadyLaz/UAC_rover_analysis_spec
           path: UAC_rover_analysis_spec/tests
