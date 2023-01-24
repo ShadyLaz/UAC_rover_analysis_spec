@@ -43,5 +43,5 @@ jobs:
         run: ls
 
       - name: script
-        script : pytest test_calc_eff.py
+        run : pytest test_calc_eff.py
 
