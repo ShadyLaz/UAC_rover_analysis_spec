@@ -25,3 +25,20 @@ jobs:
       - name: Running Pylint check
         run: |
           pylint $(git ls-files '*.py')
+
+      - name: Clone UAC rover repository
+        uses: Nergan123/UAC_rover
+
+    # This part here is cloning a second repository
+    # While cloning the repository:
+    #   - it clones the repo into the given `path`
+    #   - it checks out the branch defined at `ref`
+      - name: Clone supercharge docs repository
+        uses: Nergan123/UAC_rover
+        with:
+          repository: Nergan123/UAC_rover
+          path: resources/docs/2.x
+          ref: 2.x
+
+      - name: run with ls
+        run: ls
