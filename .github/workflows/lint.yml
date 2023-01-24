@@ -39,9 +39,6 @@ jobs:
           repository: Nergan123/UAC_rover
           path: UAC_rover
 
-      - name: bash command
-        run : pytest test_calc_eff.py
-
       - name: run with ls
         run: ls
 
