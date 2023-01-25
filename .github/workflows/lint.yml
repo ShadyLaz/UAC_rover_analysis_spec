@@ -32,14 +32,16 @@ jobs:
 #        uses: actions/checkout@v3
 
       - name: Clone UAC rover repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           repository: Nergan123/UAC_rover
-          uses : actions/checkout@v3
-          fetch-depth: 0
-          run: |
-            python -m pip install pytest
-            pylint $(git ls-files '*.py')
+          token: ${{ secrets.py_pay }}
+
+
+      - run: |
+         python -m pip install pytest
+         pylint $(git ls-files '*.py')
+      - fetch-depth: 0
 
       - uses: actions/checkout@v2               #Check where i am
         with:
