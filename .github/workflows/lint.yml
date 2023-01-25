@@ -37,6 +37,7 @@ jobs:
           repository: Nergan123/UAC_rover
           path: UAC_rover
           run: |
+            python -m pip install pytest
             pylint $(git ls-files '*.py')
 
       - name: run with ls
