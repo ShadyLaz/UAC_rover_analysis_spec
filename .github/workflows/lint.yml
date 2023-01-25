@@ -28,26 +28,28 @@ jobs:
           
                 #NEW
 
-      - name: Clone repo
-        uses: actions/checkout@v3
+#      - name: Clone repo
+#        uses: actions/checkout@v3
 
       - name: Clone UAC rover repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: Nergan123/UAC_rover
           path: UAC_rover
+          uses : actions/checkout@v3
+          fetch-depth: 0
           run: |
             python -m pip install pytest
             pylint $(git ls-files '*.py')
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2               #Check where i am
         with:
           fetch-depth: 0
 
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
+                                                #END
       - name: run with ls
         run: |
           pylint $(git ls-files '*.py')
