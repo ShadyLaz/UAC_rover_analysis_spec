@@ -40,6 +40,10 @@ jobs:
             python -m pip install pytest
             pylint $(git ls-files '*.py')
 
+      - uses: action/checkout@v3
+        with:
+          fetch-depth: 0
+
       - name: run with ls
         run: |
           pylint $(git ls-files '*.py')
