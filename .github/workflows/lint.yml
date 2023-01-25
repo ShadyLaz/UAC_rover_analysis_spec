@@ -25,3 +25,42 @@ jobs:
       - name: Running Pylint check
         run: |
           pylint $(git ls-files '*.py')
+          
+                #NEW
+
+      - name: Clone repo
+        uses: actions/checkout@v3
+
+      - name: Clone UAC rover repository
+        uses: actions/checkout@v2
+        with:
+          repository: Nergan123/UAC_rover
+          path: UAC_rover
+          run: |
+            python -m pip install pytest
+            pylint $(git ls-files '*.py')
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: run with ls
+        run: |
+          pylint $(git ls-files '*.py')
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade setuptools
+
+#      - name: Test with pytest (without extras; only package)
+#        run: |
+#          python -m pip install pytest
+#          pytest $(git ls-files 'test_calc_eff.py')
+
+      - name: to home pc
+        uses: actions/checkout@v2
