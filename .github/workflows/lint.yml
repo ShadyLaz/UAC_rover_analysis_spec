@@ -50,3 +50,4 @@ jobs:
           python -m pip install pytest
           pytest $(git ls-files 'test_calc_eff.py')
       - name: to home pc
+        uses: actions/checkout@v2
