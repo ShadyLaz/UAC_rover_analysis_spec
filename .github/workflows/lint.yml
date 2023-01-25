@@ -40,7 +40,7 @@ jobs:
             python -m pip install pytest
             pylint $(git ls-files '*.py')
 
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
