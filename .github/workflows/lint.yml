@@ -75,7 +75,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - uses: actions/checkout@master
+     - uses: actions/checkout@v3
        name: Cloning UAC rover
        with:
          repository: Nergan123/UAC_rover
@@ -95,7 +95,7 @@ jobs:
        run: |
          pylint $(git ls-files '*.py')
 
-     - uses: actions/checkout@master               #Check where i am
+     - uses: actions/checkout@v3               #Check where i am
        with:
           fetch-depth: 0
 
