@@ -86,5 +86,6 @@ jobs:
        with:
           repository: Nergan123/UAC_rover
           path: UAC_rover/power_control
-          run: |
-            pytest $(git ls-files 'SolarPanels.py')
+          fetch-depth: 0
+#          run: |
+#            pytest $(git ls-files 'SolarPanels.py')
