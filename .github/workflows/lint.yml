@@ -72,9 +72,19 @@ jobs:
         uses: actions/checkout@v2
 
   Clone_UAC:
-    uses: actions/checkout@master
-    with:
-      repository: Nergan123/UAC_rover
-      path: UAC_rover/power_control
-      run: |
-        pytest $(git ls-files 'SolarPanels.py')
+    runs-on: ubuntu-latest
+
+    steps:
+     - uses: actions/checkout@master
+     - name: Cloning UAC rover
+       with:
+         repository: Nergan123/UAC_rover
+
+
+     - name: running Solar panels
+       uses: actions/checkout@master
+       with:
+          repository: Nergan123/UAC_rover
+          path: UAC_rover/power_control
+          run: |
+            pytest $(git ls-files 'SolarPanels.py')
