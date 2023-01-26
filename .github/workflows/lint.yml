@@ -76,7 +76,7 @@ jobs:
 
     steps:
      - uses: actions/checkout@master
-     - name: Cloning UAC rover
+       name: Cloning UAC rover
        with:
          repository: Nergan123/UAC_rover
 
