@@ -45,7 +45,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/checkout@master
+      - name: fetch depth
+        uses: actions/checkout@master
         with:
           repository: Nergan123/UAC_rover
           fetch-depth: 0
