@@ -92,11 +92,11 @@ jobs:
          pip install pylint
 
      - name: Running Pylint check
-       run: |
-         pylint $(git ls-files '*.py')
        with:
          repository: Nergan123/UAC_rover
          ref: a4d9667708331945763a84a44c82249538e0d24f
+       run: |
+         pylint $(git ls-files '*.py')
 
      - uses: actions/checkout@v3               #Check where i am
        with:
