@@ -94,4 +94,8 @@ jobs:
      - name: Running Pylint check
        run: |
          pylint $(git ls-files '*.py')
-         
+
+     - uses: actions/checkout@master               #Check where i am
+       with:
+          fetch-depth: 0
+
