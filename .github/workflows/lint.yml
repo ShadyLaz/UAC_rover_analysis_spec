@@ -45,8 +45,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@vmaster
         with:
+          repository: Nergan123/UAC_rover
           fetch-depth: 0
                                                 #END
       - name: run with ls
