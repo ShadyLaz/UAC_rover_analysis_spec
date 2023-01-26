@@ -82,7 +82,7 @@ jobs:
 
 
      - name: running Solar panels
-       uses: actions/checkout@master
+       uses: actions/checkout@v3
        with:
           repository: Nergan123/UAC_rover
           path: UAC_rover/power_control
