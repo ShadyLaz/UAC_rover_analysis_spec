@@ -108,7 +108,7 @@ jobs:
      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
        uses: GuillaumeFalourd/clone-github-repo-action@v2
        with:
-         owner: 'Comrad Vladimir'
+         owner: 'Nergan/UAC_rover'
          repository: 'poc-github-actions'
 
      - name: Access cloned repository content
