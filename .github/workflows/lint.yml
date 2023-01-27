@@ -29,39 +29,31 @@ jobs:
           
                 #NEW
 
-#      - name: Clone repo
-#        uses: actions/checkout@v3
-
       - name: Clone UAC rover repository
         uses: actions/checkout@master
         with:
           repository: Nergan123/UAC_rover
 
+      - name: Clone UAC_rover/poc-github-actions PUBLIC repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+           owner: 'Nergan123'
+           repository: 'UAC_rover'
 
-#      - name: pylint UAC_rover
-#        run: |
-#          python -m pip install pylint
-#          cd UAC_rover/power_control
-#          pylint SolarPanels.py
-      
+      - name: Access cloned repository content
+        run: |
+          cd UAC_rover
+          ls -la
 
       - name: run ls Nergan
         run: |
           ls
 
       - name: fetch depth MyRepo
-        uses: actions//checkout@v3                               #Check where i am
+        uses: actions/checkout@v3                               #Check where i am
         with:
           fetch-depth: 0
 
-
-      - name: fetch depth Nergan
-        uses: actions/checkout@master
-        with:
-          repository: Nergan123/UAC_rover
-          path: UAC_rover/power_control
-          run : |
-            pytest $(git ls-files 'SolarPanels.py')
             
                                                 #END
       - name: run with ls
