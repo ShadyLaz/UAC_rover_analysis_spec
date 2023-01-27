@@ -98,6 +98,12 @@ jobs:
        run: |
          ls
 
+     - name: fetch depth Nergan
+       uses: actions/checkout@v3                               #Check where i am
+       with:
+         fetch-depth: 0
+
+
      - name: pylint UAC_rover
        run: |
          python -m pip install pylint
