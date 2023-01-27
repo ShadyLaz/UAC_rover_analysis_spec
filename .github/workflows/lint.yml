@@ -126,4 +126,8 @@ jobs:
          path: UAC_rover
          fetch-depth: 0
 
+     - name: No Path test UAC_rover
+       with:
+         fetch-depth: 0
+
 
