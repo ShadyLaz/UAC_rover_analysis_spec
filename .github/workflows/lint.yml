@@ -123,5 +123,8 @@ jobs:
 
      - uses: GuillaumeFalourd/clone-github-repo-action@v2              #Check where i am
        with:
-          fetch-depth: 0
+         owner: 'Nergan123'
+         repository: 'UAC_rover'
+         fetch-depth: 0
+
 
