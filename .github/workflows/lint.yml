@@ -103,11 +103,22 @@ jobs:
        run: |
          ls
 
-     - name: fetch depth Nergan
-       uses: actions/checkout@v3                               #Check where i am
+     - name: fetch depth Nergan                             #Check where i am
        with:
+         repository: Nergan123/UAC_rover
+         path: my-tools
          fetch-depth: 0
 
+     - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+       uses: GuillaumeFalourd/clone-github-repo-action@v2
+       with:
+         owner: 'Comrad Vladimir'
+         repository: 'poc-github-actions'
+
+     - name: Access cloned repository content
+       run: |
+         cd <UAC_rover>
+         ls -la    
 
      - name: pylint UAC_rover
        run: |
