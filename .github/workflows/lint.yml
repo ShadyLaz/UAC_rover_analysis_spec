@@ -37,10 +37,10 @@ jobs:
           repository: Nergan123/UAC_rover
           #token: $[{ secrets.my_pat ]}
 
-      - name: pylint UAC_rover
-        run: |
-          python -m pip install pylint
-          pylint SolarPanels.py
+#      - name: pylint UAC_rover
+#        run: |
+#          python -m pip install pylint
+#          pylint SolarPanels.py
       
 
       - name: run ls Nergan
@@ -105,8 +105,8 @@ jobs:
      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
        uses: GuillaumeFalourd/clone-github-repo-action@v2
        with:
-         owner: 'Nergan'
-         repository: 'UAC_rover'
+         owner: 'GuillaumeFalourd'
+         repository: 'poc-github-actions'
 
      - name: Access cloned repository content
        run: |
