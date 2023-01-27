@@ -49,11 +49,11 @@ jobs:
         run: |
           ls
 
-      - name: fetch depth MyRepo
-        uses: actions//checkout@v3                               #Check where i am
-        with:
-          fetch-depth: 0
-
+#      - name: fetch depth MyRepo
+#        uses: actions//checkout@v3                               #Check where i am
+#        with:
+#          fetch-depth: 0
+#
 
       - name: fetch depth Nergan
         uses: actions/checkout@master
