@@ -83,15 +83,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - uses: actions/checkout@v3
-       name: Cloning UAC rover
-       with:
-         repository: Nergan123/UAC_rover
-         path: my-tools
-
-     - name: Git Clone UAC
-       run: |
-         git clone https://github.com/Nergan123/UAC_rover.git
+#     - uses: actions/checkout@v3
+#       name: Cloning UAC rover
+#       with:
+#         repository: Nergan123/UAC_rover
+#         path: my-tools
+#
+#     - name: Git Clone UAC
+#       run: |
+#         git clone https://github.com/Nergan123/UAC_rover.git
         
 
      - name: Set up Python 3.10
@@ -99,9 +99,6 @@ jobs:
        with:
          python-version: '3.10.x'
 
-     - name: run ls
-       run: |
-         ls
 
 
 
