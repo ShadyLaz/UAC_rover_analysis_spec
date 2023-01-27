@@ -119,15 +119,13 @@ jobs:
 
 #     - name: Running Pylint check
 #       run: |
-#         pylint $(git ls-files '*.py')
+#         pylint SolarPanels.py
 
      - name: Inside UAC_rover
-       with:
-         path: UAC_rover
-         fetch-depth: 0
+       run: |
+        cd UAC_rover/power_control/
+        SolarPanels.py   
 
-     - name: No Path test UAC_rover
-       with:
-         fetch-depth: 0
+
 
 
