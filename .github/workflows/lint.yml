@@ -118,7 +118,11 @@ jobs:
          python -m pip install pylint
          cd UAC_rover/power_control
          pylint SolarPanels.py
-         
+
+     - name: Test with pytest (without extras; only package)
+       run: |
+          python -m pip install pytest
+          pytest $(git ls-files 'test_calc_eff.py')
 
      - name: Install requirements
        run: |
