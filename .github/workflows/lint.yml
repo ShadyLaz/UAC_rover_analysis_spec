@@ -47,7 +47,7 @@ jobs:
 
       - name: run ls Nergan
         run: |
-          ls
+          ls -la
 
       - name: fetch depth MyRepo
         uses: actions/checkout@v3                               #Check where i am
