@@ -59,6 +59,11 @@ jobs:
         run: |
           ls -la
 
+      - name: Test with pytest
+        run: | 
+          python -m pip install pytest
+          cd UAC_rover_analysis_spec/tests
+          pytest test_calc_eff.py
 
                                                 #END
 
