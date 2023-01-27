@@ -26,7 +26,13 @@ jobs:
       - name: Running Pylint check
         run: |
           pylint $(git ls-files '*.py')
-          
+
+      - name: Try First Test
+        run: |
+          python -m pip install pytest
+          from UAC_rover/power_control import SolarPanels.py
+          pytest $(git ls-files 'test_calc_eff.py')
+        
                 #NEW
 
       - name: Clone UAC rover repository
