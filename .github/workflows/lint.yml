@@ -50,21 +50,16 @@ jobs:
            owner: 'Nergan123'
            repository: 'UAC_rover'
 
-      - name: Access cloned repository content
+      - name: Access CLONED repository content
         run: |
           cd UAC_rover
           ls -la
 
-      - name: run ls Local repo
+      - name: Access LOCAL repository content
         run: |
           ls -la
 
-      - name: fetch depth MyRepo
-        uses: actions/checkout@v3                               #Check where i am
-        with:
-          fetch-depth: 0
 
-            
                                                 #END
 
 
@@ -73,8 +68,6 @@ jobs:
 #          python -m pip install pytest
 #          pytest $(git ls-files 'test_calc_eff.py')
 
-      - name: to home pc
-        uses: actions/checkout@v2
 
 #  Clone_UAC:
 #    runs-on: ubuntu-latest
