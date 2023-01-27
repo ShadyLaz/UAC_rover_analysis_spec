@@ -108,8 +108,8 @@ jobs:
      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
        uses: GuillaumeFalourd/clone-github-repo-action@v2
        with:
-         owner: 'Nergan/UAC_rover'
-         repository: 'poc-github-actions'
+         owner: 'Nergan'
+         repository: 'UAC_rover'
 
      - name: Access cloned repository content
        run: |
