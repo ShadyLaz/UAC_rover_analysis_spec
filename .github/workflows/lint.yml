@@ -103,11 +103,7 @@ jobs:
        run: |
          ls
 
-     - name: fetch depth Nergan                             #Check where i am
-       with:
-         repository: Nergan123/UAC_rover
-         path: my-tools
-         fetch-depth: 0
+
 
      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
        uses: GuillaumeFalourd/clone-github-repo-action@v2
