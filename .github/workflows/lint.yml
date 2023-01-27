@@ -110,7 +110,7 @@ jobs:
 
      - name: Access cloned repository content
        run: |
-         cd <UAC_rover>
+         cd UAC_rover
          ls -la    
 
      - name: pylint UAC_rover
