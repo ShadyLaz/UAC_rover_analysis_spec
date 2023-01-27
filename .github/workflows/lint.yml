@@ -44,11 +44,17 @@ jobs:
         run: |
           python -m pip install pylint
           pylint SolarPanels.py
+      
+
+      - name: run ls Nergan
+        run: |
+          ls
 
       - name: fetch depth MyRepo
         uses: actions//checkout@v3                               #Check where i am
         with:
           fetch-depth: 0
+
 
       - name: fetch depth Nergan
         uses: actions/checkout@master
@@ -91,13 +97,9 @@ jobs:
        with:
          python-version: '3.10.x'
 
-     - name: pylint UAC_rover
-       with:
-         repository: Nergan123/UAC_rover
-         path: UAC_rover/power_control
+     - name: run ls
        run: |
-         python -m pip install pylint
-         pylint SolarPanels.py
+         ls
 
      - name: pylint UAC_rover
        path: UAC_rover/power_control
