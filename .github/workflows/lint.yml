@@ -41,11 +41,12 @@ jobs:
          python -m pip install pytest
          pylint $(git ls-files '*.py')
 
-      - uses: actions/checkout@v3               #Check where i am
+      - name: fetch depth MyRepo
+        uses: actions/checkout@v3               #Check where i am
         with:
           fetch-depth: 0
 
-      - name: fetch depth
+      - name: fetch depth Nergan
         uses: actions/checkout@master
         with:
           repository: Nergan123/UAC_rover
