@@ -80,52 +80,52 @@ jobs:
       - name: to home pc
         uses: actions/checkout@v2
 
-  Clone_UAC:
-    runs-on: ubuntu-latest
-
-    steps:
-
-     - name: Set up Python 3.10
-       uses: actions/setup-python@v3
-       with:
-         python-version: '3.10.x'
-
-     - name: Clone UAC_rover/poc-github-actions PUBLIC repository
-       uses: GuillaumeFalourd/clone-github-repo-action@v2
-       with:
-         owner: 'Nergan123'
-         repository: 'UAC_rover'
-
-     - name: Access cloned repository content
-       run: |
-         cd UAC_rover
-         ls -la    
+#  Clone_UAC:
+#    runs-on: ubuntu-latest
 #
-#     - name: pylint UAC_rover
+#    steps:
+#
+#     - name: Set up Python 3.10
+#       uses: actions/setup-python@v3
+#       with:
+#         python-version: '3.10.x'
+#
+#     - name: Clone UAC_rover/poc-github-actions PUBLIC repository
+#       uses: GuillaumeFalourd/clone-github-repo-action@v2
+#       with:
+#         owner: 'Nergan123'
+#         repository: 'UAC_rover'
+#
+#     - name: Access cloned repository content
 #       run: |
-#         python -m pip install pylint
-#         cd UAC_rover/power_control
-#         pylint SolarPanels.py
-
-#     - name: Test with pytest (without extras; only package)
+#         cd UAC_rover
+#         ls -la
+##
+##     - name: pylint UAC_rover
+##       run: |
+##         python -m pip install pylint
+##         cd UAC_rover/power_control
+##         pylint SolarPanels.py
+#
+##     - name: Test with pytest (without extras; only package)
+##       run: |
+##          python -m pip install pytest
+##          pytest $(git ls-files 'test_calc_eff.py')
+#
+#     - name: Install requirements
 #       run: |
-#          python -m pip install pytest
-#          pytest $(git ls-files 'test_calc_eff.py')
-
-     - name: Install requirements
-       run: |
-         python -m pip install --upgrade pip
-         pip install pylint
-
-#     - name: Running Pylint check
+#         python -m pip install --upgrade pip
+#         pip install pylint
+#
+##     - name: Running Pylint check
+##       run: |
+##         pylint SolarPanels.py
+#
+#     - name: Inside UAC_rover
 #       run: |
-#         pylint SolarPanels.py
-
-     - name: Inside UAC_rover
-       run: |
-        cd UAC_rover/power_control
-        SolarPanels.py   
-
-
-
-
+#        cd UAC_rover/power_control
+#        SolarPanels.py
+#
+#
+#
+#
