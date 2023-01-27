@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: '3.10.x'
 
+      - name: run ls on local rep
+        run: |
+          ls -al
       - name: Install requirements
         run: |
           python -m pip install --upgrade pip
@@ -33,12 +36,12 @@ jobs:
           from UAC_rover/power_control import SolarPanels.py
           pytest $(git ls-files 'test_calc_eff.py')
         
-                #NEW
-
-      - name: Clone UAC rover repository
-        uses: actions/checkout@master
-        with:
-          repository: Nergan123/UAC_rover
+#                #NEW
+#
+#      - name: Clone UAC rover repository
+#        uses: actions/checkout@master
+#        with:
+#          repository: Nergan123/UAC_rover
 
       - name: Clone UAC_rover/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
