@@ -123,7 +123,7 @@ jobs:
 
      - name: Inside UAC_rover
        run: |
-        cd UAC_rover/power_control/
+        cd UAC_rover/power_control
         SolarPanels.py   
 
 
