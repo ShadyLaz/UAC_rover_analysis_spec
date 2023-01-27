@@ -41,8 +41,7 @@ jobs:
          python -m pip install pytest
          pylint $(git ls-files '*.py')
 
-      - name: fetch depth MyRepo
-        uses: actions/checkout@v3               #Check where i am
+      - name: fetch depth MyRepo             #Check where i am
         with:
           fetch-depth: 0
 
@@ -93,9 +92,9 @@ jobs:
          python -m pip install --upgrade pip
          pip install pylint
 
-     - name: Running Pylint check
-       run: |
-         pylint $(git ls-files '*.py')
+#     - name: Running Pylint check
+#       run: |
+#         pylint $(git ls-files '*.py')
 
      - uses: actions/checkout@v3               #Check where i am
        with:
