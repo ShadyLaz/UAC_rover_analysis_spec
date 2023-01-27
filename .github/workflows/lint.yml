@@ -121,10 +121,9 @@ jobs:
 #       run: |
 #         pylint $(git ls-files '*.py')
 
-     - uses: GuillaumeFalourd/clone-github-repo-action@v2              #Check where i am
+     - name: Inside UAC_rover
        with:
-         owner: 'Nergan123'
-         repository: 'UAC_rover'
+         path: UAC_rover
          fetch-depth: 0
 
 
