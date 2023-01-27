@@ -79,6 +79,7 @@ jobs:
        name: Cloning UAC rover
        with:
          repository: Nergan123/UAC_rover
+         path: my-tools
 
      - name: Set up Python 3.10
        uses: actions/setup-python@v3
