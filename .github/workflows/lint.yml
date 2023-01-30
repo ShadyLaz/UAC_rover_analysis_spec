@@ -50,15 +50,17 @@ jobs:
            owner: 'Nergan123'
            repository: 'UAC_rover'
 
+      - name: RUN SolarPanels
+        run: |
+          cd UAC_rover
+          python SolarPanels.py
+
       - name: Access CLONED repository content
         run: |
           cd UAC_rover
           ls -la
 
-      - name: RUN SolarPanels
-        run: |
-          cd UAC_rover
-          python SolarPanels.py
+
 
       - name: Access LOCAL repository content
         run: |
