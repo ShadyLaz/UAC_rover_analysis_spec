@@ -92,7 +92,7 @@ jobs:
     steps:
 
      - name: Clone UAC_rover/poc-github-actions PUBLIC repository
-       uses: Nergan123/clone-github-repo-action@v2
+       uses: GuillaumeFalourd/clone-github-repo-action@v2
        with:
          owner: 'Nergan123'
          repository: 'UAC_rover'
@@ -100,7 +100,7 @@ jobs:
      - name: Inside UAC_rover
        run: |
          cd UAC_rover/power_control
-         calc_efficiency.py
+         import SolarPanels.py
 
 
      - name: Access cloned repository content
