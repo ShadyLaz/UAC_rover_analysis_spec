@@ -99,8 +99,8 @@ jobs:
 
      - name: Inside UAC_rover
        run: |
-         cd UAC_rover/power_control
-         SolarPanels.py
+         cd UAC_rover/power_control/SolarPaneles.py
+         calc_efficiency.py
 
 
      - name: Access cloned repository content
