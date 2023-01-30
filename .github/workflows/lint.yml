@@ -61,6 +61,7 @@ jobs:
 
       - name: RUN SolarPanels
         run: |
+          cd UAC_rover
           python SolarPanels.py
       
 
