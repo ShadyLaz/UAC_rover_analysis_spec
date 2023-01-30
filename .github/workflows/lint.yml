@@ -97,6 +97,10 @@ jobs:
          owner: 'Nergan123'
          repository: 'UAC_rover'
 
+     - uses: actions/setup-python@v3
+       with:
+        python-version: '3.10.x'
+
      - name: Inside UAC_rover
        run: |
          cd UAC_rover/power_control
