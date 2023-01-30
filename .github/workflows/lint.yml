@@ -104,7 +104,7 @@ jobs:
      - name: Inside UAC_rover
        run: |
          cd UAC_rover/power_control
-         import SolarPanels.py
+         python import SolarPanels.py
 
 
      - name: Access cloned repository content
