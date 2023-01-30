@@ -55,14 +55,16 @@ jobs:
           cd UAC_rover
           ls -la
 
-      - name: Access LOCAL repository content
-        run: |
-          ls -la
-
       - name: RUN SolarPanels
         run: |
           cd UAC_rover
           python SolarPanels.py
+
+      - name: Access LOCAL repository content
+        run: |
+          ls -la
+
+
       
 
 #      - name: Test with pytest
