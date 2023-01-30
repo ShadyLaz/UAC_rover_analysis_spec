@@ -92,7 +92,7 @@ jobs:
     steps:
 
      - name: Clone UAC_rover/poc-github-actions PUBLIC repository
-       uses: GuillaumeFalourd/clone-github-repo-action@v2
+       uses: Nergan123/clone-github-repo-action@v2
        with:
          owner: 'Nergan123'
          repository: 'UAC_rover'
