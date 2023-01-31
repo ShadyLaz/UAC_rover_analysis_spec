@@ -100,6 +100,8 @@ jobs:
       - name: Test with pytest
         run: |
           mv UAC_rover/* .
+          pwd
+          ls -la
           pytest tests/test_calc_eff.py
 
 #                                          #####################
