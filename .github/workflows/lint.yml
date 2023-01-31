@@ -60,7 +60,6 @@ jobs:
       - name: Checkout SolarPanels
         run : |
           cd UAC_rover/power_control
-          python from helpers.BaseClass import BaseClass
           python SolarPanels.py
 
 
@@ -70,13 +69,14 @@ jobs:
 
 #
 #
-#          #####################
+#                                          #####################
 ##      - name: Test with pytest
 ##        run: |
 ##          python -m pip install pytest
 ##                                                          #HERE I NEED TO IMPORT UAC ROVER
 ##          pytest $(git ls-files 'test_calc_eff.py')
-#          #####################
+
+#                                          #####################
 #
 
 
