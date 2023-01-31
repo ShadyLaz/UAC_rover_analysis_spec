@@ -94,8 +94,8 @@ jobs:
 #                                          #####################
       - name: Test with pytest
         run: |
-          cd UAC_rover
-          pytest ../tests/test_calc_eff.py
+          mv UAC_rover tests/UAC_rover
+          pytest tests/test_calc_eff.py
 
 #                                          #####################
 #
