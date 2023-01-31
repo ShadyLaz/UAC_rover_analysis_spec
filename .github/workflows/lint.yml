@@ -65,10 +65,10 @@ jobs:
              repository: 'UAC_rover'
 
 
-#        - name: Install requirements.txt for UAC_rover
-#          run: |
-#            cd UAC_rover
-#            pip install -r requirements.txt
+        - name: Install requirements.txt for UAC_rover
+          run: |
+            cd UAC_rover
+            pip install -r requirements.txt
   
 
         - name: Access CLONED repository content
@@ -103,7 +103,7 @@ jobs:
 
   #                                      ############################
   #                                                #END
-  #
+
 
 
 
