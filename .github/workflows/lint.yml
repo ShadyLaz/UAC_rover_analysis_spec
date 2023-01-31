@@ -81,8 +81,7 @@ jobs:
 
       - name: Checkout SolarPanels
         run : |
-          cd UAC_rover/power_control
-          python SolarPanels.py
+          python UAC_rover/power_control/SolarPanels.py
 
 
       - name: Access LOCAL repository content
