@@ -40,11 +40,7 @@ jobs:
         run: |
           ls -al
 
-
-
-
-        
-#                #NEW
+  #CLONING UAC_rover
 
       - name: Clone UAC_rover/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
@@ -70,32 +66,15 @@ jobs:
           python -m pip install pytest
           
 
-#      - name: Test with pytest
-#        run: |
-#         python -c "import UAC_rover"
-#                                                          #HERE I NEED TO IMPORT UAC ROVER
-#          pytest $(git ls-files 'test_calc_eff.py')
-
-
-
       - name: Checkout SolarPanels
         run : |
           cd UAC_rover
           
 
-
       - name: Access LOCAL repository content
         run: |
           ls -la
 
-#
-#
-#                                          #####################
-#      - name: Test with pytest
-#        run: |
-#          mv UAC_rover tests/UAC_rover
-#          cd tests/UAC_rover
-#          pytest ../test_calc_eff.py
 
       - name: Test with pytest
         run: |
@@ -105,7 +84,12 @@ jobs:
           python tests_main.py
 
 #                                          #####################
-#
+      - name: Test 2 with pytest
+        run: |
+          mv UAC_rover/* .
+          pwd
+          ls -la
+          pytest tests_main.py
 
 
 
