@@ -95,8 +95,8 @@ jobs:
       - name: Test with pytest
         run: |
           cd UAC_rover
-          python -m pip install pytest
-                                                          #HERE I NEED TO IMPORT UAC ROVER
+          pwd
+          find --name test_calc_eff.py
           pytest $(git ls-files '../tests/test_calc_eff.py')
 
 #                                          #####################
