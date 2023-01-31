@@ -92,7 +92,7 @@ jobs:
             ls -la
   
 
-        - name: Test with pytest
+        - name: Calling pytest from Python code
           run: |
             mv UAC_rover/* .
             pwd
