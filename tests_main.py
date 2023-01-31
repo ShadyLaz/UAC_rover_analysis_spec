@@ -17,6 +17,6 @@ def main():
 
 
 if __name__ == "__main__":
-    files = main()
-    for file in files:
-        pytest.main(["-v", file])
+    #files = main()
+    #for file in files:
+    pytest.main(["-v", "tests/"])
