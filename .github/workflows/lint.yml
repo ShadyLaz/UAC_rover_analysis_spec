@@ -86,7 +86,7 @@ jobs:
 #                                          #####################
       - name: Test 2 with pytest
         run: |
-          mv UAC_rover/* .
+
           pwd
           ls -la
           pytest tests_main.py
