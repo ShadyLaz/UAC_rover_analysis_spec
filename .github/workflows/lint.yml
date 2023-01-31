@@ -62,7 +62,7 @@ jobs:
 
       - name: Checkout SolarPanels
         run : |
-          cd UAC_rover
+          cd UAC_rover/power_control
           cat SolarPanels.py
 
 
