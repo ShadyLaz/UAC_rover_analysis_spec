@@ -53,20 +53,30 @@ jobs:
            owner: 'Nergan123'
            repository: 'UAC_rover'
 
+
       - name: Install requirements.txt for UAC_rover
         run: |
           cd UAC_rover
           pip install -r requirements.txt
+
 
       - name: Access CLONED repository content
         run: |
           cd UAC_rover
           ls -la
 
-      - name: Checkout SolarPanels
-        run : |
-          cd UAC_rover/power_control
-          python SolarPanels.py
+      - name: Test with pytest
+        run: |
+          python -m pip install pytest
+                                                          #HERE I NEED TO IMPORT UAC ROVER
+          pytest $(git ls-files 'test_calc_eff.py')
+
+
+
+#      - name: Checkout SolarPanels
+#        run : |
+#          cd UAC_rover/power_control
+#          python SolarPanels.py
 
 
       - name: Access LOCAL repository content
