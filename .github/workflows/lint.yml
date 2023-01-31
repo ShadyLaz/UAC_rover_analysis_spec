@@ -60,6 +60,7 @@ jobs:
       - name: Checkout SolarPanels
         run : |
           cd UAC_rover/power_control
+          python from helpers.BaseClass import BaseClass
           python SolarPanels.py
 
 
