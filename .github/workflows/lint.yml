@@ -64,6 +64,12 @@ jobs:
         run: |
           cd UAC_rover
           ls -la
+          
+
+      - name: install pytest
+        run: |
+          python -m pip install pytest
+          
 
       - name: Test with pytest
         run: |
