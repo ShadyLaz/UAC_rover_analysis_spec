@@ -26,9 +26,9 @@ jobs:
           
 
 
-#      - name: Running Pylint check
-#        run: |                                             WORKS "COMMENTED FOR IMPORT ISSUES WHILE DEBUGGING"
-#          pylint $(git ls-files '*.py')
+      - name: Running Pylint check
+        run: |                                          
+          pylint $(git ls-files '*.py')
 
 
       - name: Install dependencies
