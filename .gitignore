@@ -3,4 +3,4 @@ __pychache__
 .idea
 venv
 UAC_rover
-tests/test_charge.py
+tests/test_receive_charge.py
