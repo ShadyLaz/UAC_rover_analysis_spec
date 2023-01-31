@@ -1,6 +1,6 @@
 # from loggingFile import logg
 import pytest
-from power_control.SolarPanels import SolarPanels
+from ..power_control.SolarPanels import SolarPanels
 
 
 @pytest.mark.parametrize("temp, eff", [
