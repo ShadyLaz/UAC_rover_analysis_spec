@@ -67,7 +67,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-         python UAC_rover
+         python -c "import UAC_rover"
                                                           #HERE I NEED TO IMPORT UAC ROVER
           pytest $(git ls-files 'test_calc_eff.py')
 
