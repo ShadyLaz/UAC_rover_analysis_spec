@@ -97,7 +97,7 @@ jobs:
           cd UAC_rover
           pwd
           ls ../tests
-          pytest $(git ls-files '../tests/test_calc_eff.py')
+          pytest ../tests/test_calc_eff.py'
 
 #                                          #####################
 #
