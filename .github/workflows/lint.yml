@@ -39,7 +39,7 @@ jobs:
           ls -al
 
 
-  jobs:
+
     Testing UAC_rover:
       runs-on: ubuntu-latest
 
