@@ -102,7 +102,7 @@ jobs:
           mv UAC_rover/* .
           pwd
           ls -la
-          pytest tests/test_calc_eff.py
+          python tests_main.py
 
 #                                          #####################
 #
