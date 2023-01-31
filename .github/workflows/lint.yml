@@ -22,34 +22,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint
+
       - name: Running Pylint check
-        run: |
-          pylint $(git ls-files '*.py')
-          
-                #NEW
-
-      - name: Clone repo
-        uses: actions/checkout@v3
-
-      - name: Clone UAC rover repository
-        uses: actions/checkout@v2
-        with:
-          repository: Nergan123/UAC_rover
-          path: UAC_rover
-          run: |
-            python -m pip install pytest
-            pylint $(git ls-files '*.py')
-
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: run with ls
-        run: |
+        run: |                                          
           pylint $(git ls-files '*.py')
 
       - name: Install dependencies
@@ -57,10 +32,67 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --upgrade setuptools
 
-#      - name: Test with pytest (without extras; only package)
-#        run: |
-#          python -m pip install pytest
-#          pytest $(git ls-files 'test_calc_eff.py')
+      - name: run ls on local rep
+        run: |
+          ls -al
 
-      - name: to home pc
-        uses: actions/checkout@v2
+
+  Testing_UAC_rover:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v3
+        - name: Set up Python 3.10
+          uses: actions/setup-python@v3
+          with:
+            python-version: '3.10.x'
+
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            python -m pip install --upgrade setuptools
+
+#                    #CLONING UAC_rover
+
+        - name: Clone UAC_rover/poc-github-actions PUBLIC repository
+          uses: GuillaumeFalourd/clone-github-repo-action@v2
+          with:
+             owner: 'Nergan123'
+             repository: 'UAC_rover'
+
+        - name: Install requirements.txt for UAC_rover
+          run: |
+            cd UAC_rover
+            pip install -r requirements.txt
+
+        - name: Access CLONED repository content
+          run: |
+            cd UAC_rover
+            ls -la
+
+        - name: install pytest
+          run: |
+            python -m pip install pytest
+
+        - name: Access SolarPanels
+          run : |
+            cd UAC_rover
+
+        - name: Checkout LOCAL repository content
+          run: |
+            ls -la
+
+        - name: Calling pytest from Python code
+          run: |
+            mv UAC_rover/* .
+            pwd
+            ls -la
+            python tests_main.py
+  
+
+  #                                      ############################
+
+
+
+
+
