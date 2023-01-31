@@ -22,12 +22,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint
-          
 
       - name: Running Pylint check
         run: |                                          
           pylint $(git ls-files '*.py')
-
 
       - name: Install dependencies
         run: |
@@ -37,7 +35,6 @@ jobs:
       - name: run ls on local rep
         run: |
           ls -al
-
 
 
   Testing_UAC_rover:
@@ -50,13 +47,12 @@ jobs:
           with:
             python-version: '3.10.x'
 
-
         - name: Install dependencies
           run: |
             python -m pip install --upgrade pip
             python -m pip install --upgrade setuptools
 
-    #CLONING UAC_rover
+#                    #CLONING UAC_rover
 
         - name: Clone UAC_rover/poc-github-actions PUBLIC repository
           uses: GuillaumeFalourd/clone-github-repo-action@v2
@@ -64,33 +60,27 @@ jobs:
              owner: 'Nergan123'
              repository: 'UAC_rover'
 
-
         - name: Install requirements.txt for UAC_rover
           run: |
             cd UAC_rover
             pip install -r requirements.txt
-  
 
         - name: Access CLONED repository content
           run: |
             cd UAC_rover
             ls -la
-            
 
         - name: install pytest
           run: |
             python -m pip install pytest
-            
 
         - name: Access SolarPanels
           run : |
             cd UAC_rover
-            
 
         - name: Checkout LOCAL repository content
           run: |
             ls -la
-  
 
         - name: Calling pytest from Python code
           run: |
@@ -99,10 +89,9 @@ jobs:
             ls -la
             python tests_main.py
   
-  
 
   #                                      ############################
-  #                                                #END
+
 
 
 
