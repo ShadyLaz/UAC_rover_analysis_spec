@@ -85,10 +85,11 @@ jobs:
 
         - name: move test file insite UAC_rover dir
           run: |
-            mv UAC_rover/*
+            mv UAC_rover/* .
 
         - name: Calling pytest from Python code
           run: |
+            
             pwd
             ls -la
             python tests_main.py
