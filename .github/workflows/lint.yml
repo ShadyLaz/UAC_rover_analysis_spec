@@ -81,10 +81,14 @@ jobs:
         - name: Checkout LOCAL repository content
           run: |
             ls -la
+            
+
+        - name: move test file insite UAC_rover dir
+          run: |
+            mv UAC_rover/*
 
         - name: Calling pytest from Python code
           run: |
-            mv UAC_rover/* .
             pwd
             ls -la
             python tests_main.py
