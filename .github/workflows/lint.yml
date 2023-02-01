@@ -83,15 +83,15 @@ jobs:
             ls -la
             
 
-        - name: move test file insite UAC_rover dir
+        - name: move test file inside UAC_rover dir
           run: |
+            pwd
             mv UAC_rover/* .
+            pwd
+            ls -la
 
         - name: Calling pytest from Python code
           run: |
-            
-            pwd
-            ls -la
             python tests_main.py
   
 
