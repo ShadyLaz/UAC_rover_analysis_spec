@@ -87,11 +87,11 @@ jobs:
           run: |
             pwd
             mv UAC_rover/* .
-            pwd
             ls -la
 
         - name: Calling pytest from Python code
           run: |
+            pwd
             python tests_main.py
   
 
