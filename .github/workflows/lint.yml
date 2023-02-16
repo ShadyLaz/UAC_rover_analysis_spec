@@ -83,7 +83,7 @@ jobs:
             ls -la
             
 
-        - name: move test file inside UAC_rover dir
+        - name: move test repo inside UAC_rover dir
           run: |
             pwd
             mv UAC_rover/* .
@@ -93,6 +93,11 @@ jobs:
           run: |
             pwd
             python tests_main.py
+            
+
+        - name: test done
+          run: |
+              ls -la  
   
 
   #                                      ############################
