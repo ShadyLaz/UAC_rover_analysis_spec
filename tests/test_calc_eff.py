@@ -1,4 +1,4 @@
-# from loggingFile import logg
+from loggingFile import logger
 import pytest
 from power_control.SolarPanels import SolarPanels
 
@@ -28,8 +28,8 @@ from power_control.SolarPanels import SolarPanels
                         pytest.mark.xfail()]
     ),
 ])
-def test_InOptimalTempFail(temp, eff):
+def test_InOptimalTempFail(temp, eff, logger):
     """ checks if efficiency is optimal  """
 
-    #logg.info("LOGGER_MESSAGE")
+    logger.info("TESTING---------------------------------------------")
     assert SolarPanels.calc_efficiency(temp) == eff
