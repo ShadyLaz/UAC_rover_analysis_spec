@@ -1,6 +1,5 @@
 from loggingFile import logger
 import pytest
-from power_control.PowerControl import PowerControl
 from RoverFile import Rover
 import time
 from modules.Weather.WeatherMain import WeatherMain
@@ -14,6 +13,7 @@ from modules.Weather.WeatherMain import WeatherMain
 ])
 def test_give(logger,Shortsleep, LongSleep):
     """ Module should not make a new measurement if previous was done less than 30 seconds ago  """
+    logger.info("LOGGER_MESSAGE")
     rover = Rover()
     before = rover.weather_core.get_weather()
     #time_before = before.date_measurement()
