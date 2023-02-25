@@ -24,6 +24,8 @@ jobs:
           pip install pylint
 
       - name: Running Pylint check
+        run: |
+          ls -al
 #        run: |
 #          pylint $(git ls-files '*.py')
 
