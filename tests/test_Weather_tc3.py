@@ -1,4 +1,4 @@
-# from loggingFile import logg
+from loggingFile import logger
 import pytest
 from power_control.SolarPanels import SolarPanels
 
@@ -7,11 +7,9 @@ from power_control.SolarPanels import SolarPanels
     pytest.param(b'\x00\x10', 0.006274509803921569
                  ),
 ])
-def test_charge(logg, conditions, IntOutput):
+def test_charge_bytes(logger, conditions, IntOutput):
     """ checks if byte output is equal to int output """
 
-    logg.info("LOGGER_MESSAGE")
+    logger.info("LOGGER_MESSAGE")
     charge_output = SolarPanels.charge(conditions)
-    # assert float(str(charge_output)[:5]) == float(str(IntOutput)[:5])
-    # Better way to write this function
     assert float(str(charge_output)) == pytest.approx(float(str(IntOutput)))
