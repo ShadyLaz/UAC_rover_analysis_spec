@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint
 
-#      - name: Running Pylint check
+      - name: Running Pylint check
 #        run: |
 #          pylint $(git ls-files '*.py')
 

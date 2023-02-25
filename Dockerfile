@@ -3,7 +3,7 @@ FROM python:3.10
 
 MAINTAINER ShadyLaz "ShadyLaz"
 
-# Update aptitude with new repo
+# Update aptitude with new repo.
 RUN apt-get update
 
 # Install software
