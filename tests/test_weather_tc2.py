@@ -1,13 +1,13 @@
+import time
 from loggingFile import logger
 import pytest
 from RoverFile import Rover
-import time
 from modules.Weather.WeatherMain import WeatherMain
 
 
 @pytest.mark.parametrize("Shortsleep,LongSleep", [
     pytest.param(
-        2, 31, marks=pytest.mark.tags("TC-1"),
+        2, 35, marks=pytest.mark.tags("TC-1"),
     )
 
 ])
@@ -15,13 +15,17 @@ def test_give(logger,Shortsleep, LongSleep):
     """ Module should not make a new measurement if previous was done less than 30 seconds ago  """
     logger.info("LOGGER_MESSAGE")
     rover = Rover()
-    before = rover.weather_core.get_weather()
+    rover.weather_core.get_weather()
     #time_before = before.date_measurement()
+    date_old = rover.weather_core.date_measurement
+    print(date_old)
 
-    time.sleep(LongSleep)
+    time.sleep(Shortsleep)
 
-    after = rover.weather_core.get_weather()
-    assert before == after
+    rover.weather_core.get_weather()
+    date_new = rover.weather_core.date_measurement
+    print(date_new)
+    assert date_old == date_new
 
 
     #time_after = after.date_measurement()

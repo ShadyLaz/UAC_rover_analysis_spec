@@ -16,7 +16,7 @@ RUN git clone https://github.com/Nergan123/UAC_rover.git
 RUN rm UAC_rover/requirements.txt
 RUN mv UAC_rover/* .
 RUN pip install -r requirements.txt
-
+RUN pylint ./**/*.py
 CMD ["python", "tests_main.py"]
 
 
